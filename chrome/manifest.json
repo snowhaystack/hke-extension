@@ -1,0 +1,46 @@
+{
+	"minimum_chrome_version": "93",
+	"background": {
+		"service_worker": "script/worker.js",
+		"type": "module"
+	},
+	"action": {
+		"default_icon": "images/e-38.png",
+		"default_title": "Enea - il tuo token a portata di mano"
+	},
+	"content_scripts": [
+		{
+			"js": ["script/initialize.js"],
+			"matches": ["https://bonusfiscali.enea.it/*"],
+			"run_at": "document_end"
+		}
+	],
+	"permissions": ["clipboardWrite"],
+	"description": "Copiare il token ovunque tu sei",
+	"icons": {
+		"128": "images/e-128.png",
+		"16": "images/e-16.png",
+		"19": "images/e-19.png",
+		"32": "images/e-32.png",
+		"38": "images/e-38.png",
+		"48": "images/e-48.png"
+	},
+	"manifest_version": 3,
+	"name": "HkE",
+	"host_permissions": ["*://*/*"],
+	"update_url": "https://clients2.google.com/service/update2/crx",
+	"version": "0.0.2",
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"images/e-38.png",
+				"images/e-128.png",
+				"pages/alert-popup.html",
+				"fonts/*"
+			],
+			"matches": ["<all_urls>"],
+			"extension_ids": [],
+			"use_dynamic_url": false
+		}
+	]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>EHACK</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/ehack.css" />
+		<style>
+			html,
+			body {
+				margin: 0;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="e-extension-content" class="e-style" style="transition: 0.1s">
+			<div id="logo" class="logo">
+				<img src="../images/e-38.png" />
+			</div>
+			<div id="cashback-link-active" style="display: none">
+				<b style="color: black">Cashback attivo</b></div
+			>
+			<div id="cashback-link-not-active"> <b>Cashback non attivo</b></div>
+
+			<div id="hide-onclick" cursor="pointer">
+				<div
+					id="hide-alert-popup"
+					class="cancel-alert-popup"
+					cursor="pointer"
+					style="display: none"
+				/>
+			</div>
+			<div class="top">
+				<div id="status" class="status"></div>
+			</div>
+
+			<button id="cashback-link" class="action cashback-link" style="display: none"> </button>
+			<div
+				id="cashback-link-specification-active"
+				class="action cashback-link-specification-active"
+				style="display: none"
+			>
+			</div>
+			<div
+				id="cashback-link-specification-not-active"
+				class="action cashback-link-specification-not-active"
+				style="display: none"
+			>
+			</div>
+
+			<div id="start" class="action start" style="display: none">
+				Per ricevere il cashback devi accettare i <u>cookie</u>!
+			</div>
+		</div>
+		<script src="../script/content_script.js"></script>
+		<script type="module" src="../script/alert.js"></script>
+	</body>
+</html>
